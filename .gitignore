@@ -1,0 +1,11 @@
+.snakekmake/*
+*.ipynb
+*.log
+logs/*
+workflow/raw_data/*
+workflow/processed_data/*
+workflow/.snakekmake/*
+*.fastq.gz
+.snakekmake/
+*.idx
+__pycache__/

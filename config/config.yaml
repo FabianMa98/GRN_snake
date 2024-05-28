@@ -1,0 +1,28 @@
+stranded:
+  # take stranded into consideration for kallisto
+  rf: "--rf-stranded"
+  fr: "--fr-stranded"
+fragment_length: 100
+standard_deviation: 20
+# Download directory
+SRA_download_SE: raw_data/SE/
+SRA_download_PE: raw_data/PE/
+# Path to SraRunInfo.csv
+SraRunInfo: "/homes/fmatten/Downloads/SraRunInfo (2).csv"
+# Path to reference genome
+genome: "/prj/synechocystis/Researchmodul_Fabian/data/Assembly/GCF_000009725_1_ASM972v1_cds_from_genomic.fna" 
+# Path to adapter for SE trimming
+SE_adapter: "adapters/TruSeq3-SE.fa"
+# Path to adapter for PE trimming
+PE_adapter: "adapters/TruSeq3-PE.fa"
+GRN:
+  generate: True
+# Place GENIE3.py inside scripts dir
+# These will mostly use defaults but you can change it here if you want to
+GENIE3:
+  regulators: "/prj/single-bakti-seq/fmatten/kallisto_snake/kallisto_snake/workflow/test_regulators.tsv"
+  tree_method: "RF"
+  number_of_trees: "sqrt"
+  # Selected attributes at each node
+  K:  "sqrt"
+  nthreads: 8
